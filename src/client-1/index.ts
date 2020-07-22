@@ -21,9 +21,9 @@ const http = require('http');
 const app = express();
 app.use(express.static('./web'), cors());
 [
-  { path: '/api/userData', remoteUrl: 'https://gdpr-users-server.herokuapp.com/api1/' },
-  { path: '/api/sleepData', remoteUrl: 'https://gdpr-sleep-preprocessing-serve.herokuapp.com/api1/' },
-  { path: '/api/bodyHealthData', remoteUrl: 'https://gdpr-health-preprocessing-serv.herokuapp.com/api1/' },
+  { path: '/api/userData', remoteUrl: 'http://gdpr-users-server.herokuapp.com/api1/' },
+  { path: '/api/sleepData', remoteUrl: 'http://gdpr-sleep-preprocessing-serve.herokuapp.com/api1/' },
+  { path: '/api/bodyHealthData', remoteUrl: 'http://gdpr-health-preprocessing-serv.herokuapp.com/api1/' },
 ].map((proxy) => {
   app.get(proxy.path, (req, res) => {
     // respond to the client

@@ -5,7 +5,7 @@ const CONFIG: Server = {
   name: 'health-preprocessing-server',
   port: process.env.PORT || 8003,
   paths: ['/api1'],
-  remoteUrls: ['https://gdpr-sleep-database.herokuapp.com/api1', 'https://gdpr-health-database.herokuapp.com/api1'],
+  remoteUrls: ['http://gdpr-sleep-database.herokuapp.com/api1', 'http://gdpr-health-database.herokuapp.com/api1'],
   gdprTracingBaseConfiguration: {
     serviceName: 'health-preprocessing-server',
     location: 'Europe',

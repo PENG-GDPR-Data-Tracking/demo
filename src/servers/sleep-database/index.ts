@@ -5,7 +5,7 @@ const CONFIG: Server = {
   name: 'sleep-database',
   port: process.env.PORT || 8004,
   paths: ['/api1', '/api2'],
-  remoteUrls: ['https://gdpr-statistics-server.herokuapp.com/api2'],
+  remoteUrls: ['http://gdpr-statistics-server.herokuapp.com/api2'],
   gdprTracingBaseConfiguration: {
     serviceName: 'sleep-database',
     location: 'Europe',
