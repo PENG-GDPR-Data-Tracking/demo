@@ -1,16 +1,9 @@
+import { OpenTelemetryGdprPluginConfiguration } from 'opentelemetry-plugin-gdpr';
+
 export interface Server {
   name: string;
-  port: number;
+  port: string | number;
   paths: string[];
   remoteUrls: string[];
-  location: string;
-  gdprTracingBaseConfiguration: GdprTracingBaseConfiguration;
-}
-
-export interface GdprTracingBaseConfiguration {
-  baseTTL: number;
-  baseLegalBasis: string;
-  baseLegitimateInterest: string;
-  baseAutomatedDecisionMaking: boolean;
-  basePurpose: string;
+  gdprTracingBaseConfiguration: OpenTelemetryGdprPluginConfiguration;
 }

@@ -1,12 +1,14 @@
-import { tracing } from '../../opentelemerty';
+import { tracingFullConfiguration } from 'opentelemetry-plugin-gdpr';
+import { Server } from '../../types';
 
-const CONFIG = {
+const CONFIG: Server = {
   name: 'health-preprocessing-server',
-  port: 8003,
+  port: process.env.PORT || 8003,
   paths: ['/api1'],
   remoteUrls: ['http://localhost:8004/api1', 'http://localhost:8005/api1'],
-  location: 'Europe',
   gdprTracingBaseConfiguration: {
+    serviceName: 'health-preprocessing-server',
+    location: 'Europe',
     baseTTL: 216000,
     baseLegalBasis: 'Contractual',
     baseLegitimateInterest: '',
@@ -15,9 +17,6 @@ const CONFIG = {
   },
 };
 
-// don't know why, but opentelemetry express plugin works better when express is not yet imported
-// so we initalize tracking and then register the server (run express) using dynamic import
-// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+tracingFullConfiguration(CONFIG.gdprTracingBaseConfiguration);
 
-tracing(CONFIG);
 import('../registerServer').then((m) => m.registerServer(CONFIG));
