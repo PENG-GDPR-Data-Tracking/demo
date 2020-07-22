@@ -10,7 +10,7 @@ const CONFIG: OpenTelemetryGdprPluginConfiguration = {
   baseAutomatedDecisionMaking: false,
   basePurpose: 'Webserver for providing our WebApp',
 };
-tracingFullConfiguration(CONFIG, 'https://gdpr-zipkin.sloppy.zone');
+tracingFullConfiguration(CONFIG, 'https://gdpr-zipkin.sloppy.zone/api/v2/spans');
 
 // don't know why, but opentelemetry express plugin works better when express is not yet imported
 // so we initalize tracking and then import express

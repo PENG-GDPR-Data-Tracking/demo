@@ -1,5 +1,9 @@
 # PEng GDPR Tracing Demo
 
+## Try it out
+
+Point of entry is https://peng-722a7.web.app/ which queries the Zipkin server at
+
 ## Install
 
 1. Clone the repo

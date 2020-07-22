@@ -17,6 +17,6 @@ const CONFIG: Server = {
   },
 };
 
-tracingFullConfiguration(CONFIG.gdprTracingBaseConfiguration);
+tracingFullConfiguration(CONFIG.gdprTracingBaseConfiguration, 'https://gdpr-zipkin.sloppy.zone/api/v2/spans');
 
 import('../registerServer').then((m) => m.registerServer(CONFIG));
