@@ -11,7 +11,7 @@
     "s4": "nodemon src/servers/sleep-database/index.ts",
     "s5": "nodemon src/servers/health-database/index.ts",
     "s6": "nodemon src/servers/statistics-server/index.ts",
-    "c1p": "ts-node src/client-1/index.ts",
+    "c1p": "cd src/client-1/ && ts-node index.ts",
     "s1p": "ts-node src/servers/users-server/index.ts",
     "s2p": "ts-node src/servers/sleep-preprocessing-server/index.ts",
     "s3p": "ts-node src/servers/health-preprocessing-server/index.ts",
