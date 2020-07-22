@@ -2,7 +2,17 @@
 
 ## Try it out
 
-Point of entry is https://peng-722a7.web.app/ which queries the Zipkin server at
+Point of entry is https://peng-722a7.web.app/ which queries the Zipkin server at https://gdpr-zipkin.sloppy.zone/zipkin/
+
+In order to generate a some traces go to https://gdpr-client-1.herokuapp.com/ which emulates the requests made by an real app.
+In the background it queries data from the other servers:
+
+- https://gdpr-health-database.herokuapp.com/
+- https://gdpr-health-preprocessing-serv.herokuapp.com/
+- https://gdpr-sleep-database.herokuapp.com/
+- https://gdpr-sleep-preprocessing-serve.herokuapp.com/
+- https://gdpr-statistics-server.herokuapp.com/
+- https://gdpr-users-server.herokuapp.com/
 
 ## Install
 
