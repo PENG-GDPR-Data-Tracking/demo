@@ -5,7 +5,9 @@
 Point of entry is https://peng-722a7.web.app/ which queries the Zipkin server at https://gdpr-zipkin.sloppy.zone/zipkin/. 
 It should be empty on first view (or previous traces are still shown). 
 
-> Note: The Heroku-Apps might need some time on first load (up to a minute) 
+> Note: The Heroku-Apps might need some time on first load (up to a minute). As there are services requesting each other this might result in an overall delay of more than 3 minutes till the traces are reported to zipkin. 
+
+
 In order to generate some traces go to https://gdpr-client-1.herokuapp.com/ and press a button. 
 This queries the the same endpoints that would be used by a real app.
 
